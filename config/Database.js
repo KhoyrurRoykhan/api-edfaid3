@@ -1,11 +1,8 @@
 import { Sequelize } from "sequelize";
 import mysql2 from 'mysql2';
 
-const Database = new Sequelize({
-    database: 'b2iobim6wv0db1b8vdtp',
-    username: 'ualuujfll9mzkrde',
-    password: 'R20jh72l4AxRrhCnuoxv',
-    host: 'b2iobim6wv0db1b8vdtp-mysql.services.clever-cloud.com',
+const Database = new Sequelize('btfgnbuywd64cr2fp0qy','uvgfuxlyf5p7zgfq','7L8zCKiRTjbpRw5tStF1',{
+    host: 'btfgnbuywd64cr2fp0qy-mysql.services.clever-cloud.com',
     dialect: 'mysql',
     dialectModule: mysql2,
 });
