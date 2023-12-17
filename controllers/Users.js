@@ -55,7 +55,9 @@ export const Login = async(req, res) => {
         });
         res.cookie('refreshToken', refreshToken,{
             httpOnly: true,
-            maxAge: 24 * 60 * 60 * 1000
+            maxAge: 24 * 60 * 60 * 1000,
+            secure: process.env.NODE_ENV === 'production', // Set to true in production if using HTTPS
+            sameSite: 'none', // Set to 'none' for cross-origin cookies
         });
         res.json({ accessToken });
     } catch (error) {
