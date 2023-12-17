@@ -28,7 +28,7 @@ try {
     console.error(error);
 }
 
-app.use(cors({ credentials: true, origin: 'https://aplikasi-edfa-id.vercel.app' }));
+app.use(cors({ credentials: true, origin: 'http://localhost:1234' }));
 app.use(cookieParser());
 app.use(express.json());
 app.use(FileUpload());
