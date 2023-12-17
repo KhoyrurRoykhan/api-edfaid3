@@ -53,7 +53,7 @@ export const Login = async(req, res) => {
                 id: userId
             }
         });
-        res.body('refreshToken', refreshToken,{
+        res.cookie('refreshToken', refreshToken,{
             httpOnly: true,
             maxAge: 24 * 60 * 60 * 1000
         });
